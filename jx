@@ -1,4 +1,4 @@
-#marcos
+#!/bin/bash
 
 help_message="Script to change between java versions on macos
 Usage: jx [options...] <version>
@@ -26,7 +26,7 @@ jx()
   if test -n "$java_version"
   then
     export JAVA_HOME="$java_install_dir/$java_version/Contents/Home"
-    echo $JAVA_HOME
+    echo "$JAVA_HOME"
     java -version
   else
     echo "Java version not installed, select one of the versions below:"
