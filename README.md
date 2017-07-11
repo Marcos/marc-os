@@ -1,4 +1,4 @@
-Shell scritps that help me to not be bored
+# Shell scritps to help me on macos :)
 
 ### [jx](https://github.com/Marcos/marc-os/blob/master/jx)
 
