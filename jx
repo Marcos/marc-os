@@ -1,0 +1,37 @@
+#marcos
+
+help_message="Script to change between java versions on macos
+Usage: jx [options...] <version>
+-h, --help Show this message"
+java_install_dir="/Library/Java/JavaVirtualMachines"
+
+case "$1" in
+  -h | --help)
+    echo "$help_message"
+    exit 0;
+  ;;
+  5 | 6 | 7 | 8 | 9 ) java_option=$1 ;;
+  *)
+    echo "Not supperted version, select versions from 5 to 9"
+    exit 1;
+  ;;
+esac
+
+jx()
+{
+  unset JAVA_HOME
+  unset java_version
+  java_version=$(ls "$java_install_dir" | grep "jdk1.$java_option\|jdk-$java_option" | tail -1)
+
+  if test -n "$java_version"
+  then
+    export JAVA_HOME="$java_install_dir/$java_version/Contents/Home"
+    echo $JAVA_HOME
+    java -version
+  else
+    echo "Java version not installed, select one of the versions below:"
+    ls "$java_install_dir"
+    exit 1;
+  fi
+}
+jx
