@@ -1,0 +1,8 @@
+#aliases
+alias dc="docker-compose"
+alias srcp="source ~/.profile"
+alias epr="code ~/.profile"
+alias dpru="docker system prune -af; docker volume prune -f"
+alias crd="cd /Users/marcos/Code/Creditas;ls"
+alias mrc="cd /Users/marcos/Code/Marcos;ls"
+alias grw="./gradlew"
