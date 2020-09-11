@@ -1,4 +1,4 @@
-# Shell scritps to help me on macos :)
+# Scripts to help me on macos :)
 
 ### Aliases
 ```shell
