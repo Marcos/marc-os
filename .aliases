@@ -1,8 +1,9 @@
 #aliases
-alias dc="docker-compose"
-alias srcp="source ~/.profile"
-alias epr="code ~/.profile"
-alias dpru="docker system prune -af; docker volume prune -f"
-alias crd="cd /Users/marcos/Code/Creditas;ls"
-alias mrc="cd /Users/marcos/Code/Marcos;ls"
-alias grw="./gradlew"
+alias dc='docker-compose'
+alias srcp='source ~/.profile'
+alias epr='code ~/.profile'
+alias dpru='docker system prune -af; docker volume prune -f'
+alias mrc='cd ~/Documents/Code/Marcos;ls'
+alias meli='cd ~/Documents/Code/Meli;ls'
+alias grw='./gradlew'
+alias furytoken='export FURY_TOKEN=$(fury get-token | grep "Bearer" | sed -n '\''s/.*Bearer \(.*\)/\1/p'\'' | tail -n 1)'
